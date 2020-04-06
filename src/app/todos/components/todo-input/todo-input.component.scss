@@ -1,0 +1,28 @@
+.todo-input {
+
+  border-bottom: 1px solid hsla(0,0%,100%,.6);
+  padding: 5px;
+
+  input {
+    width: 95%;
+    background: none;
+    border: none;
+    height: 35px;
+    color: #fff;
+    font-size: 1.3em;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: hsla(0,0%,100%,.4);
+      font-weight: 100;
+    }
+  }
+
+  .button-add {
+    clear: right;
+    margin: 2px;
+  }
+}

@@ -1,0 +1,22 @@
+<div fxLayout="column" >
+  <mat-card class="todo" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px" [ngClass]="{'completed': todo?.completed}">
+
+    <app-checkbox [checked]="todo?.completed" (change)="onToggleComplete($event)"></app-checkbox>
+
+    <div fxFlex class="title">
+      <input type="text" [(ngModel)]="todo.title" fxFlex (click)="$event.stopPropagation()" (change)="onTitleChanged(todo.title)"/>
+    </div>
+
+    <div class="actions">
+      <app-button
+        color="rgba(0,0,0,.1)"
+        hoverColor="#f44336"
+        strokeWidth="2px"
+        icon="remove"
+        size="small"
+        (click)="onTodoRemoved()">
+      </app-button>
+    </div>
+
+  </mat-card>
+</div>

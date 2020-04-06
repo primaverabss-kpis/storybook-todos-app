@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { action } from '@storybook/addon-actions';
 
 export default {
-  title: 'Shared/Buttons',
+  title: 'UI Kit/Buttons',
   component: ButtonComponent,
   decorators: [
     moduleMetadata({

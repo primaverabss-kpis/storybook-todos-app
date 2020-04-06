@@ -1,0 +1,17 @@
+<div
+  fxFlex
+  fxLayout="column"
+  fxLayoutAlign="center stretch"
+  fxLayoutGap="20px">
+
+  <app-title value="todos"></app-title>
+
+  <app-todo-input (todoAdded)="onTodoAdded($event)"></app-todo-input>
+
+  <app-todo-list
+    [todos]="todos"
+    (todoChanged)="onTodoUpdated($event)"
+    (todoRemoved)="onTodoRemoved($event)">
+  </app-todo-list>
+
+</div>

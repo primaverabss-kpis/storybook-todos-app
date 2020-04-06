@@ -1,0 +1,29 @@
+.todo {
+  color: #333;
+  font-weight: 300;
+  border-radius: 3px 20px 3px 20px;
+
+  .title {
+    input {
+      font-size: 1.3em;
+      cursor: pointer;
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:hover {
+        color: #2196f3;
+      }
+    }
+  }
+
+  &.completed {
+    .title {
+      input {
+        text-decoration: line-through;
+      }
+    }
+  }
+}

@@ -17,6 +17,9 @@ export class ButtonComponent implements OnInit {
   style: ButtonStyle = ButtonStyle.Circle;
 
   @Input()
+  bgColor: string = 'none';
+
+  @Input()
   color: string = 'black';
 
   @Input()
@@ -35,9 +38,7 @@ export class ButtonComponent implements OnInit {
   click: EventEmitter<Event> = new EventEmitter<Event>();
 
   currentColor: string;
-  internalSize: string;
-  iconFontSize: string;
-  iconPadding: string;
+  fontSize: string;
   borderRadius: string;
 
   ngOnInit(): void {
@@ -46,19 +47,13 @@ export class ButtonComponent implements OnInit {
 
     switch (this.size) {
       case ButtonSize.Small:
-        this.internalSize = '20px';
-        this.iconFontSize = '20px';
-        this.iconPadding = '3px';
+        this.fontSize = '20px';
         break;
       case ButtonSize.Medium:
-        this.internalSize = '30px';
-        this.iconFontSize = '24px';
-        this.iconPadding = '0px';
+        this.fontSize = '30px';
         break;
       case ButtonSize.Large:
-        this.internalSize = '40px';
-        this.iconFontSize = '24px';
-        this.iconPadding = '0px';
+        this.fontSize = '40px';
         break;
     }
   }

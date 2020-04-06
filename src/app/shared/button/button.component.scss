@@ -1,4 +1,10 @@
-.circle {
+.button {
+  display: inline-block;
   border-style: solid;
+  text-align: center;
   cursor: pointer;
+
+  .icon {
+    vertical-align: middle;
+  }
 }

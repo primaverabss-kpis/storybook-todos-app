@@ -1,21 +1,21 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatIconModule } from '@angular/material/icon';
-import { TodoItemComponent } from './todo-item/todo-item.component';
+import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { TodoInputComponent, TodoItemComponent, TodoListComponent } from './components';
+import { TodosPageComponent } from './containers';
+import { todosRoutes } from './todos.routes';
 
 @NgModule({
-  declarations: [TodoItemComponent],
+  declarations: [
+    TodoItemComponent,
+    TodoListComponent,
+    TodoInputComponent,
+    TodosPageComponent
+  ],
   imports: [
-    CommonModule,
     SharedModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatButtonModule,
-    MatIconModule
-  ]
+    RouterModule.forChild(todosRoutes)
+  ],
+  exports: [TodosPageComponent]
 })
 export class TodosModule { }

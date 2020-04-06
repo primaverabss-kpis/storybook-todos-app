@@ -5,7 +5,7 @@ import { ButtonComponent } from '../button/button.component';
 import { action } from '@storybook/addon-actions';
 
 export default {
-  title: 'Shared/Checkbox',
+  title: 'UI Kit/Checkbox',
   component: CheckboxComponent,
   decorators: [
     moduleMetadata({

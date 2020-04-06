@@ -1,0 +1,20 @@
+<div class="todo-input" >
+  <input
+    type="text"
+    placeholder="What do you need to do?"
+    [(ngModel)]="value"
+    (keydown)="onKeydown($event)" />
+
+  <app-button
+    *ngIf="value.length > 0"
+    class="button-add"
+    [style]="'square'"
+    size="medium"
+    icon="add"
+    bgColor="#2196f3"
+    color="white"
+    strokeWidth="0px"
+    (click)="onButtonClick()">
+  </app-button>
+
+</div>

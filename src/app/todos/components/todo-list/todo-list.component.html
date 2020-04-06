@@ -1,0 +1,26 @@
+<div
+  *ngIf="todos.length > 0; else emptyList"
+  fxLayout="column"
+  fxLayoutGap="20px" >
+
+  <app-todo-item
+    *ngFor="let todo of todos"
+    [todo]="todo"
+    (todoRemoved)="onTodoRemoved($event)"
+    (todoChanged)="onTodoChanged($event)">
+  </app-todo-item>
+</div>
+
+<ng-template #emptyList>
+
+  <div
+    class="empty"
+    fxLayout="column"
+    fxLayoutGap="10px"
+    fxLayoutAlign="center center">
+
+    <mat-icon class="icon">done</mat-icon>
+    <div class="message">You have no tasks to do!</div>
+  </div>
+
+</ng-template>

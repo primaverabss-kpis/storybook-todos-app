@@ -7,19 +7,20 @@ import { moduleMetadata } from '@storybook/angular';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { TodoItemComponent } from './todo-item.component';
 
+
 export default {
   title: 'Todos/Todo Item',
   component: TodoItemComponent,
   decorators: [
     moduleMetadata({
-      imports: [SharedModule, MatCardModule, MatCheckboxModule, MatButtonModule, MatIconModule]
+      imports: [SharedModule]
     })
   ]
 };
 
 const props = {
-  toggleComplete: action('toggleComplete'),
-  delete: action('delete')
+  todoRemoved: action('todoRemoved'),
+  todoChanged: action('todoChanged')
 };
 
 export const Active = () => ({

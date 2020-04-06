@@ -1,12 +1,10 @@
 <div
-  class="circle"
-  fxLayout="row"
-  fxLayoutAlign="center center"
-  [ngStyle]="{'width': internalSize, 'height': internalSize, 'border-color': currentColor, 'border-width': strokeWidth, 'border-radius': borderRadius}"
+  class="button"
+  [ngStyle]="{'border-color': currentColor, 'border-width': strokeWidth, 'border-radius': borderRadius, 'background': bgColor, 'width': fontSize, 'height': fontSize }"
   (mouseenter)="onMouseEnter($event)"
   (mouseleave)="onMouseLeave($event)"
   (click)="onMouseClick($event)">
 
-  <mat-icon [ngStyle]="{'color': currentColor, 'font-size': iconFontSize, 'padding-top': iconPadding }" *ngIf="iconVisible">{{icon}}</mat-icon>
+  <mat-icon class="icon" [ngStyle]="{'color': currentColor, 'width': fontSize, 'height': fontSize, 'font-size': fontSize }"><span *ngIf="iconVisible">{{icon}}</span></mat-icon>
 
 </div>
