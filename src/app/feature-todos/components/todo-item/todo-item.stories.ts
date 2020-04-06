@@ -1,10 +1,6 @@
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatIconModule } from '@angular/material/icon';
 import { action } from '@storybook/addon-actions';
 import { moduleMetadata } from '@storybook/angular';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { UiKitModule } from '../../../ui-kit/ui-kit.module';
 import { TodoItemComponent } from './todo-item.component';
 
 
@@ -13,7 +9,7 @@ export default {
   component: TodoItemComponent,
   decorators: [
     moduleMetadata({
-      imports: [SharedModule]
+      imports: [UiKitModule]
     })
   ]
 };

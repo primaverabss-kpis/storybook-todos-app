@@ -1,9 +1,7 @@
 import { addDecorator, addParameters, moduleMetadata } from '@storybook/angular';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { withKnobs } from '@storybook/addon-knobs';
 
-addDecorator(moduleMetadata({
-  imports: [FlexLayoutModule]
-}));
+addDecorator(withKnobs);
 
 addParameters({
   options: {

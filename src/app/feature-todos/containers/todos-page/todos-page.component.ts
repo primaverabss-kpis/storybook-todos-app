@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { tap, switchMap } from 'rxjs/operators';
 import { Todo } from '../../models/todo.model';
 import { TodosService } from '../../services/todos.service';
 

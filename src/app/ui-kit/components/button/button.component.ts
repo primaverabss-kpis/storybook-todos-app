@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter, HostListener } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter, HostListener, OnChanges, SimpleChanges } from '@angular/core';
 
 enum ButtonSize { Small = 'small', Medium = 'medium', Large = 'large' }
 enum ButtonStyle { Circle = 'circle', Square = 'square' }
@@ -8,7 +8,7 @@ enum ButtonStyle { Circle = 'circle', Square = 'square' }
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent implements OnInit, OnChanges {
 
   @Input()
   size: ButtonSize = ButtonSize.Large;
@@ -42,23 +42,14 @@ export class ButtonComponent implements OnInit {
   borderRadius: string;
 
   ngOnInit(): void {
-    this.currentColor = this.color;
-    this.borderRadius = this.style === ButtonStyle.Circle ? '50%' : '0%';
-
-    switch (this.size) {
-      case ButtonSize.Small:
-        this.fontSize = '20px';
-        break;
-      case ButtonSize.Medium:
-        this.fontSize = '30px';
-        break;
-      case ButtonSize.Large:
-        this.fontSize = '40px';
-        break;
-    }
+    this.updateStyles();
   }
 
-  onMouseClick(evt: Event): void {
+  ngOnChanges(changes: SimpleChanges): void {
+    this.updateStyles();
+  }
+
+  onMouseClick(evt: MouseEvent): void {
     this.click.emit(evt);
     evt.stopPropagation();
   }
@@ -77,4 +68,20 @@ export class ButtonComponent implements OnInit {
     evt.preventDefault();
   }
 
+  private updateStyles() {
+    this.currentColor = this.color;
+    this.borderRadius = this.style === ButtonStyle.Circle ? '50%' : '0%';
+
+    switch (this.size) {
+      case ButtonSize.Small:
+        this.fontSize = '20px';
+        break;
+      case ButtonSize.Medium:
+        this.fontSize = '30px';
+        break;
+      case ButtonSize.Large:
+        this.fontSize = '40px';
+        break;
+    }
+  }
 }

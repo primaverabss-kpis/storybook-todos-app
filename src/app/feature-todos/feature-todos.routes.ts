@@ -1,5 +1,5 @@
 import { TodosPageComponent } from './containers';
 
-export const todosRoutes = [
+export const featureTodosRoutes = [
   { path: 'todos', component: TodosPageComponent },
 ];

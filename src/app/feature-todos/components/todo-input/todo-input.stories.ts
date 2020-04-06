@@ -1,14 +1,14 @@
 import { moduleMetadata } from '@storybook/angular';
 import { TodoInputComponent } from './todo-input.component';
-import { SharedModule } from 'src/app/shared/shared.module';
 import { action } from '@storybook/addon-actions';
+import { UiKitModule } from '../../../ui-kit/ui-kit.module';
 
 export default {
   title: 'Todos/Todo Input',
   component: TodoInputComponent,
   decorators: [
     moduleMetadata({
-      imports: [SharedModule]
+      imports: [UiKitModule]
     })
   ]
 };

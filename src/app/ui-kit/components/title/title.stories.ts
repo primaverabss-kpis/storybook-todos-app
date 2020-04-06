@@ -1,4 +1,5 @@
 import { TitleComponent } from './title.component';
+import { text } from '@storybook/addon-knobs';
 
 export default {
   title: 'UI Kit/Title',
@@ -8,6 +9,6 @@ export default {
 export const Standard = () => ({
   component: TitleComponent,
   props: {
-    value: 'Todos'
+    value: text('Title', 'todos')
   }
 });

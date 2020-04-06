@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
-import { TodosModule } from './todos/todos.module';
+import { FeatureTodosModule } from './feature-todos/feature-todos.module';
 
 
 @NgModule({
@@ -13,7 +13,7 @@ import { TodosModule } from './todos/todos.module';
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    TodosModule
+    FeatureTodosModule
   ],
   providers: [],
   bootstrap: [AppComponent]

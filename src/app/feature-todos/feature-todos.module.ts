@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SharedModule } from '../shared/shared.module';
+import { UiKitModule } from '../ui-kit/ui-kit.module';
 import { TodoInputComponent, TodoItemComponent, TodoListComponent } from './components';
 import { TodosPageComponent } from './containers';
-import { todosRoutes } from './todos.routes';
+import { featureTodosRoutes } from './feature-todos.routes';
 
 @NgModule({
   declarations: [
@@ -13,9 +13,9 @@ import { todosRoutes } from './todos.routes';
     TodosPageComponent
   ],
   imports: [
-    SharedModule,
-    RouterModule.forChild(todosRoutes)
+    UiKitModule,
+    RouterModule.forChild(featureTodosRoutes)
   ],
   exports: [TodosPageComponent]
 })
-export class TodosModule { }
+export class FeatureTodosModule { }

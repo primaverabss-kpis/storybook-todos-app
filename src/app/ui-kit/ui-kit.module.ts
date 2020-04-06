@@ -1,16 +1,13 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonComponent } from './button/button.component';
+import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatIconModule } from '@angular/material/icon';
-import { CheckboxComponent } from './checkbox/checkbox.component';
-import { TitleComponent } from './title/title.component';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-
+import { ButtonComponent, CheckboxComponent, TitleComponent } from './components';
 
 @NgModule({
   declarations: [
@@ -42,7 +39,6 @@ import { MatListModule } from '@angular/material/list';
     ButtonComponent,
     CheckboxComponent,
     TitleComponent,
-
   ]
 })
-export class SharedModule { }
+export class UiKitModule { }
