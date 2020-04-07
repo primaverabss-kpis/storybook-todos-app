@@ -3,11 +3,9 @@ module.exports = {
   addons: [
     '@storybook/addon-actions',
     '@storybook/addon-links',
-    '@storybook/addon-backgrounds',
     '@storybook/addon-knobs',
-    {
-      name: '@storybook/addon-docs',
-      options: { configureJSX: true }
-    },
+    '@storybook/addon-viewport',
+    '@storybook/addon-a11y',
+    'storybook-addon-themes',
   ],
 };
