@@ -8,10 +8,13 @@ addDecorator(withA11Y);
 
 addParameters({
   options: {
-    showRoots: true
+    showRoots: true,
+    panelPosition: 'right',
+    // storySort
+    selectedPanel: 'storybook/knobs/panel'
   },
   themes: [
-    { name: 'Endless River', class: 'theme-endless-river', color: '#42cea2'},
+    { name: 'Endless River', class: 'theme-endless-river', color: '#42cea2', default: true},
     { name: 'Steel Gray', class: 'theme-steel-gray', color: '#928DAB' },
   ],
 });
