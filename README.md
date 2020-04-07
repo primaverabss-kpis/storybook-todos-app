@@ -1,6 +1,6 @@
 # Storybook Todos App - HandsOnLab
 
-![Todos app screenchot][https://raw.githubusercontent.com/m1kl/storybook-todos-app/master/banner.jpg]
+![Todos app screenchot](https://raw.githubusercontent.com/m1kl/storybook-todos-app/master/banner.jpg)
 
 
 This repository contains the source code of a simple todo app to demonstrate user interface component development using [Storybook](https://storybook.js.org/).
