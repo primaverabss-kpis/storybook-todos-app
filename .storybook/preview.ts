@@ -1,5 +1,5 @@
-import { addDecorator, addParameters, moduleMetadata } from '@storybook/angular';
 import { withKnobs } from '@storybook/addon-knobs';
+import { addDecorator, addParameters } from '@storybook/angular';
 
 addDecorator(withKnobs);
 
@@ -12,3 +12,4 @@ addParameters({
     { name: 'green', value: '#42cea2' },
   ]
 });
+
