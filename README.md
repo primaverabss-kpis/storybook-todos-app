@@ -1,5 +1,3 @@
-# Storybook Todos App - HandsOnLab
-
 ![Todos app screenchot](https://raw.githubusercontent.com/m1kl/storybook-todos-app/master/banner.jpg)
 
 
