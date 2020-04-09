@@ -3,7 +3,7 @@
 
 This repository contains the source code of a simple todo app to demonstrate user interface component development using [Storybook](https://storybook.js.org/).
 
-You can find in the following video all the steps to install and configure storybook for component development.
+You can find in the following [video](http://www.youtube.com/watch?v=6zqh4b5MbtU) all the steps to install and configure storybook for component development.
 
 [![Storybook Tutorial](https://img.youtube.com/vi/6zqh4b5MbtU/maxresdefault.jpg)](http://www.youtube.com/watch?v=6zqh4b5MbtU "Storybook Tutorial")
 
