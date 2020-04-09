@@ -5,9 +5,7 @@ This repository contains the source code of a simple todo app to demonstrate use
 
 You can find in the following video all the steps to install and configure storybook for component development.
 
-
-_Video tutorial comming soon...._
-
+[![Storybook Tutorial](https://img.youtube.com/vi/6zqh4b5MbtU/maxresdefault.jpg)](http://www.youtube.com/watch?v=6zqh4b5MbtU "Storybook Tutorial")
 
 **Live Demos**
 
